@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ZipGeo API</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: system-ui; max-width: 600px; margin: 40px auto; padding: 20px; line-height: 1.6; }
+    code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; }
+    a { color: #0070f3; }
+  </style>
+</head>
+<body>
+  <h1>ZipGeo API</h1>
+  <p>Global ZIP/postal code → City, State, Lat/Lng. 60+ countries.</p>
+  
+  <h3>Try it:</h3>
+  <p><code>GET /api?zip=90210</code> <a href="/api?zip=90210" target="_blank">Test</a></p>
+  <p><code>GET /api?zip=SW1A&country=gb</code> <a href="/api?zip=SW1A&country=gb" target="_blank">Test UK</a></p>
+  
+  <h3>Auth Required:</h3>
+  <p>Add header: <code>x-api-key: ship-it-2026</code></p>
+  <p><b>Get API Key:</b> $9/mo - DM me</p>
+  
+  <h3>Response:</h3>
+  <pre><code>{
+  "zip_code": "90210",
+  "city": "Beverly Hills",
+  "state": "California",
+  "latitude": 34.0901,
+  "longitude": -118.4065
+}</code></pre>
+</body>
+</html>
