@@ -1,8 +1,5 @@
 {
   "name": "zipgeo-api",
-  "version": "1.0.0", 
-  "description": "Fast global ZIP/postal code to city, state, lat/lng API",
-  "engines": {
-    "node": "18.x"
-  }
+  "version": "1.0.0",
+  "description": "Fast global ZIP/postal code to city, state, lat/lng API"
 }
