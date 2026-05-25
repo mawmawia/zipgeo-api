@@ -1,4 +1,14 @@
 module.exports = async (req, res) => {
+  // API KEY CHECK - change 'ship-it-2026' to your secret key
+  const apiKey = req.headers['x-api-key'];
+  if (apiKey!== 'ship-it-2026') {
+    return res.status(401).json({ 
+      error: 'Invalid API key', 
+      get_key: 'Email me for access',
+      free_test: '/api?zip=90210 (remove x-api-key header to test)'
+    });
+  }
+
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Content-Type', 'application/json');
   
