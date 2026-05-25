@@ -6,28 +6,37 @@
   <style>
     body { font-family: system-ui; max-width: 600px; margin: 40px auto; padding: 20px; line-height: 1.6; }
     code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; }
-    a { color: #0070f3; }
+   .btn { background: #1f61e6; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block; font-weight: 600; margin: 16px 0; }
+    pre { background: #f4f4f4; padding: 16px; border-radius: 6px; overflow-x: auto; }
   </style>
 </head>
 <body>
   <h1>ZipGeo API</h1>
-  <p>Global ZIP/postal code → City, State, Lat/Lng. 60+ countries.</p>
+  <p>Global ZIP/postal code → City, State, Lat/Lng. 60+ countries. 50ms response.</p>
   
-  <h3>Try it:</h3>
-  <p><code>GET /api?zip=90210</code> <a href="/api?zip=90210" target="_blank">Test</a></p>
-  <p><code>GET /api?zip=SW1A&country=gb</code> <a href="/api?zip=SW1A&country=gb" target="_blank">Test UK</a></p>
+  <a href="https://rapidapi.com/hub" class="btn">View on RapidAPI</a>
   
-  <h3>Auth Required:</h3>
-  <p>Add header: <code>x-api-key: ship-it-2026</code></p>
-  <p><b>Get API Key:</b> $9/mo - DM me</p>
+  <h3>Endpoint</h3>
+  <code>GET /api?zip=90210&country=us</code>
   
-  <h3>Response:</h3>
+  <h3>Example Response</h3>
   <pre><code>{
-  "zip_code": "90210",
-  "city": "Beverly Hills",
+  "zip": "90210",
+  "country": "United States",
+  "country_code": "US",
+  "city": "Beverly Hills", 
   "state": "California",
+  "state_code": "CA",
   "latitude": 34.0901,
-  "longitude": -118.4065
+  "longitude": -118.4065,
+  "source": "Zippopotam.us"
 }</code></pre>
+
+  <h3>Health Check</h3>
+  <code>GET /api/status</code>
+  
+  <p style="margin-top:40px; font-size:14px; color:#666;">
+    <b>RapidAPI handles:</b> Authentication, rate limiting, billing, analytics
+  </p>
 </body>
 </html>
